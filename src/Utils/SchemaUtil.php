@@ -14,6 +14,10 @@ class SchemaUtil
         $fieldTypeParams = explode(',', array_shift($databaseInputs));
         $fieldType = array_shift($fieldTypeParams);
 
+        if ($fieldType == 'toggle') {
+            $fieldType = 'boolean';
+        }
+
         $fieldStr = '$table->'.$fieldType."('".$fieldName."'";
 
         if (count($fieldTypeParams) > 0) {
