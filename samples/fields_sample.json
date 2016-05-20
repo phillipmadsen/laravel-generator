@@ -1,63 +1,110 @@
 [
-  {
-    "fieldInput": "id:increments",
-    "htmlType": "",
-    "validations": "",
-    "searchable": false,
-    "fillable": false,
-    "primary": true
-  },
-  {
-    "fieldInput": "title:string,20",
-    "htmlType": "text",
-    "validations": "required",
-    "searchable": true
-  },
-  {
-    "fieldInput": "email_test:string",
-    "htmlType": "email",
-    "searchable": true
-  },
-  {
-    "fieldInput": "date_test:datetime",
-    "htmlType": "date"
-  },
-  {
-    "fieldInput": "number_test:integer",
-    "htmlType": "number"
-  },
-  {
-    "fieldInput": "file_test:string",
-    "htmlType": "file"
-  },
-  {
-    "fieldInput": "password_test:string",
-    "htmlType": "password"
-  },
-  {
-    "fieldInput": "select_test:string",
-    "htmlType": "select:Option1,Option2,Option3,Option4,Option5",
-    "searchable": true
-  },
-  {
-    "fieldInput": "enum_test:enum",
-    "htmlType": "enum:Mon,Tue,Wed,Thu,Fri,Sat,Sun",
-    "searchable": true
-  },
-  {
-    "fieldInput": "radio_test:string",
-    "htmlType": "radio:Male,Female"
-  },
-  {
-    "fieldInput": "checkbox_test:string",
-    "htmlType": "checkbox:true"  
-  },
     {
-    "fieldInput": "checkbox-group_test:string",
-    "htmlType": "checkbox-group:Check1,Check2"
-  },
-  {
-    "fieldInput": "body:text",
-    "htmlType": "textarea"
-  }
+        "fieldInput": "id:increments",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "fieldInput": "title:string,65",    // field name with database type and options
+        "htmlType": "text",                 // field html type
+        "validations": "required",          // field validations
+        "searchable": true,                // is field searchable
+        "fillable": true,                  // if field should be fillable
+        "primary": true,                    // does field is primary key
+        "inForm": true,                    // if field should be included in create and edit form
+        "inIndex": true,                   // if field should be included in index.blade.php
+        "bsColumnSize": 8                   // Bootstrap Column Size
+    },
+    {
+        "fieldInput": "email:string",
+        "htmlType": "email",
+        "searchable": true
+    },
+    {
+        "fieldInput": "post_date:dateTime",
+        "htmlType": "date"
+    },
+    {
+        "fieldInput": "words:integer",
+        "htmlType": "number"
+    },
+    {
+        "fieldInput": "attachment:string",
+        "htmlType": "file"
+    },
+    {
+        "fieldInput": "password:string",
+        "htmlType": "password",
+        "inIndex": false
+    },
+    {
+        "fieldInput": "post_type:string",
+        "htmlType": "select:Type1,Type2,Type3,Type4",
+        "validations": "",
+        "searchable": true
+    },
+    {
+        "fieldInput": "post_day:enum",
+        "htmlType": "enum:Mon,Tue,Wed,Thu,Fri,Sat,Sun",
+        "validations": "",
+        "searchable": true
+    },
+    {
+        "fieldInput": "post_author_gender:string",
+        "htmlType": "radio:Male,Female",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": false
+    },
+    {
+        "fieldInput": "body:text",
+        "htmlType": "textarea",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": false 
+    },
+    {
+        "fieldInput": "private_post:string",  /* CHECKBOX WITH VALUE OPTION */
+        "htmlType": "checkbox:Yes",
+        "validations": "",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": false,
+        "bsColumnSize": 2 
+    },
+    {
+        "fieldInput": "is_active:boolean", /* BOOLEAN CHECKBOX */
+        "htmlType": "bool-checkbox:checked", /* OPTIONS ARE CHECKED | UNCHECKED */
+        "validations": "",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": false,
+        "bsColumnSize": 2 
+    },
+    {
+        "fieldInput": "is_published:boolean",   /* BOOTSTRAP STYLED TOGGLE SWICH */
+        "htmlType": "toggle-switch",
+        "validations": "",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": false,
+        "bsColumnSize": 2 
+    },
 ]
